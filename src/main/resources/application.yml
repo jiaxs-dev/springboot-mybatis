@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: @profile@
+  application:
+    name: springboot-mybatis
+  mail:
+    host: mail.dongao.com
+    port: 25
+    username: teachtest@dongao.com
+    password: Dongao2019@.com
+    to: jiaxiansun@dongao.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
+server:
+  servlet:
+    context-path: /
+  port: 9089
+
+
+interceptor:
+  excludePathPatterns: /hello
+  pathPatterns: /**
+
+
+logging:
+  level:
+    com:
+      framework:
+        springboot:
+          mybatis:
+            module:
+                mapper: debug
